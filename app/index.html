@@ -17,6 +17,8 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+      
+    <!--<link rel="stylesheet" href="styles/flexslider.css">-->
     
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -30,7 +32,8 @@
     <div class="header">
         <div class="topNav">
             <div class="container">
-                <div class="col-xs-6 col-sm-3 logo">
+                <div class="row">
+                     <div class="col-xs-6 col-sm-3 logo">
                     <a href="#">
                         <img class="img-responsive" src="images/img-logo-senuelo-de-pesca.png" alt="Señuelo de Pesca" title="Señuelo de Pesca">
                     </a>
@@ -71,6 +74,65 @@
                   </nav>
                   <!-- /Static navbar -->
             </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9 homeSlider">
+                        <!-- Place somewhere in the <body> of your page -->
+                        <div class="flexslider">
+                          <ul class="slides">
+                            <li>
+                                <figure>
+                                    <img src="images/slide1.jpg" />
+                                </figure>
+                                <header class="entry-header">
+                                    <div class="entry-meta">
+							         <span class="entry-category"><a href="http://www.enmoto.tv/category/viajes/">Pesca</a></span>
+                                     <span class="entry-date">marzo 14, 2016</span>
+                                    </div>
+                            
+                                    <h2 class="entry-title">
+                                        <a href="http://www.enmoto.tv/camino-a-termales-del-ruiz-es/">¿CUALES SON LOS SEÑUELOS MÁS UTILIZADOS PARA LA PESCA EN LAGO?</a>
+                                    </h2>
+                                    <a class="read-more" href="http://www.enmoto.tv/camino-a-termales-del-ruiz-es/">Leer Mas</a>
+                                </header>
+                            </li>
+                            <li>
+                              <figure>
+                                    <img src="images/slide1.jpg" />
+                                </figure>
+                                <header class="entry-header">
+                                    <div class="entry-meta">
+							         <span class="entry-category"><a href="http://www.enmoto.tv/category/viajes/">Pesca</a></span>
+                                     <span class="entry-date">marzo 14, 2016</span>
+                                    </div>
+                            
+                                    <h2 class="entry-title">
+                                        <a href="http://www.enmoto.tv/camino-a-termales-del-ruiz-es/">¿CUALES SON LOS SEÑUELOS MÁS UTILIZADOS PARA LA PESCA EN LAGO?</a>
+                                    </h2>
+                                    <a class="read-more" href="http://www.enmoto.tv/camino-a-termales-del-ruiz-es/">Leer Mas</a>
+                                </header>
+                            </li>
+                            <li>
+                              <figure>
+                                    <img src="images/slide1.jpg" />
+                                </figure>
+                                <header class="entry-header">
+                                    <div class="entry-meta">
+							         <span class="entry-category"><a href="http://www.enmoto.tv/category/viajes/">Pesca</a></span>
+                                     <span class="entry-date">marzo 14, 2016</span>
+                                    </div>
+                            
+                                    <h2 class="entry-title">
+                                        <a href="http://www.enmoto.tv/camino-a-termales-del-ruiz-es/">¿CUALES SON LOS SEÑUELOS MÁS UTILIZADOS PARA LA PESCA EN LAGO?</a>
+                                    </h2>
+                                    <a class="read-more" href="http://www.enmoto.tv/camino-a-termales-del-ruiz-es/">Leer Mas</a>
+                                </header>
+                            </li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -103,10 +165,16 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="scripts/jquery.flexslider-min.js"></script>
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script>
+        $(window).load(function() {
+            $('.flexslider').flexslider();
+          });  
+    </script>
     <!-- endbuild -->
   </body>
 </html>
