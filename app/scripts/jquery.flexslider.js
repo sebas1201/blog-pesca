@@ -175,6 +175,7 @@
           } else {
             if (event.keyCode == 39) {
               var target = slider.getTarget('next');
+
             } else if (event.keyCode == 37){
               var target = slider.getTarget('prev');
             }
@@ -228,7 +229,6 @@
       //FlexSlider: Pause/Play
       if (slider.vars.pausePlay) {
         var pausePlayScaffold = $('<div class="flex-pauseplay"><span></span></div>');
-      
         if (slider.containerExists) {
           slider.controlsContainer.append(pausePlayScaffold);
           slider.pausePlay = $('.flex-pauseplay span', slider.controlsContainer);
@@ -236,10 +236,8 @@
           slider.append(pausePlayScaffold);
           slider.pausePlay = $('.flex-pauseplay span', slider);
         }
-        
         var pausePlayState = (slider.vars.slideshow) ? 'pause' : 'play';
-        slider.pausePlay.addClass(pausePlayState).text((pausePlayState == 'pause') ? slider.vars.pauseText : slider.vars.playText);
-        
+        slider.pausePlay.addClass(pausePlayState).text((pausePlayState === 'pause') ? slider.vars.pauseText : slider.vars.playText);
         slider.pausePlay.bind(slider.eventType, function(event) {
           event.preventDefault();
           if ($(this).hasClass('pause')) {
@@ -270,13 +268,11 @@
           dx,
           startT,
           scrolling = false;
-              
         slider.each(function() {
           if ('ontouchstart' in document.documentElement) {
             this.addEventListener('touchstart', onTouchStart, false);
           }
         });
-        
         function onTouchStart(e) {
           if (slider.animating) {
             e.preventDefault();
@@ -355,6 +351,7 @@
               slider.container.css(slider.args);
             }
           }
+
         });
       }
       //////////////////////////////////////////////////////////////////
@@ -576,6 +573,5 @@
         new $.flexslider($(this), options);
       }
     });
-  }  
-
+  }
 })(jQuery);
