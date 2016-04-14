@@ -23,6 +23,11 @@
 *********************************/ 
 .flexslider {
     max-width: 80%;
+    
+    @media (max-width: $screen-xs-max) {
+        max-width: 100%;
+    }
+    
   .slides > li { 
     display: none;
     -webkit-backface-visibility: hidden; /* Hide the slides before the JS is loaded. Avoids image jumping */
@@ -59,10 +64,10 @@ html[xmlns] .slides {display: block;}
   margin: 0 10%;
   position: relative; 
   zoom: 1;
-    top: 80px;
+    margin:60px 0;
     
     @media (max-width: $screen-sm-max) {
-      top: 40px;
+      margin: 20px 0;
     }
   
   .slides {

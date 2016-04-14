@@ -1,13 +1,26 @@
 @import 'variables';
 
+// General Styles
+
+.cf:before,
+.cf:after {
+    content: "";
+    display: table;
+} 
+.cf:after {
+    clear: both;
+}
+.cf {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+
 .header {
     background: url(../images/bg-header-home.jpg) center;
-    min-height: 690px;
     
     .topNav {
-        background: $brown-light;
-        border-bottom: 1px dashed $gray-cold;
-        height: 50px;  
+        background: url(../images/bg-topNav.png) top repeat-x;
         
         .logo {
             
@@ -28,11 +41,14 @@
                 .navbar-header {
                     
                     .navbar-toggle {
-                        border: solid 1px $gray-cold;
+                        border: solid 1px $red-logo;
+                        background: rgba(0,0,0,0.3);
                         margin-right: 0;
+                        -webkit-box-shadow: 0 0 10px 0 rgba(255,255,255,0.5);
+                        box-shadow: 0 0 10px 0 rgba(255,255,255,0.5);
                         
                         span {
-                            background: $gray-cold;
+                            background: rgba(255,255,255,0.7);
                         }
                         
                     }
@@ -51,6 +67,7 @@
                     position: absolute;
                     top: 65px;
                     right: 0;
+                    z-index: 10;
                     
                       @media (min-width: $screen-sm-min) {
                           background: none;
@@ -76,9 +93,14 @@
                                 -o-transition: color 0.3s ease;
                                 transition: color 0.3s ease;
                                 
-                                &:hover {
+                                @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+                                  padding: 15px 10px;
+                                }
+                                
+                                &:hover, &:focus {
                                     background: none;
                                     color: $red-logo;
+                                    outline: none;
                                 }
                                 
                             }
@@ -97,6 +119,10 @@
                     }
                     
                     .navbar-nav.socialContent {
+                        
+                        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+                          display: none;
+                        }
                         
                         .social {
                             background: url(../images/sprite-social-icons.png) no-repeat;
@@ -230,5 +256,116 @@
             }
         }
     }
+    
+}
+
+.ppalNav {
+    background: $brown-light;
+    border: 1px solid #FFF;
+    border-width: 0 0 1px 0;
+    position: relative;
+    margin: -1px 0 1px;
+    z-index: 1px;
+    
+    &:after {
+    //background: $gray-cold;
+      content: '';
+      position: absolute;
+      top: -2px;
+      bottom: -2px;
+      border: 1px dashed $gray-cold;
+        border-width: 1px 0;
+        left: 0;
+        right: 0;
+      z-index: 1;
+    }
+    
+    .navbar-header {
+        
+        padding: 10px 0;
+                    
+        .navbar-toggle {
+            border: solid 1px $red-logo;
+            margin-right: 0;
+            z-index: 2;
+            background: rgba(0,0,0,0.4);
+            -webkit-box-shadow: 0 0 10px 0 rgba(255,255,255,0.5);
+            box-shadow: 0 0 10px 0 rgba(255,255,255,0.5);
+
+            span {
+               font-family: $font-DIN; 
+               font-size: 18px;
+                background: rgba(255,255,255,1);
+
+        }
+
+    }
+        
+    }
+    
+    .main-menu {
+            z-index: 3;
+        position: relative;
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            
+            @media (max-width: $screen-sm-min) {
+                flex-direction: column;
+                padding: 0;
+            }
+            
+            
+            
+            li {
+                display: block;
+                flex-grow: 1;
+                padding: 15px 0;
+                
+                @media (max-width: $screen-sm-min) {
+                    border: 1px dashed $gray-cold;
+                    border-width: 1px 0 0;
+                    padding: 10px 0;
+                    
+                    &:first-child {
+                        border-color: $red-logo;
+                    }
+                }
+                
+                > a {
+                    color: $gray-nav;
+                    font-family: $font-DIN;
+                    font-size: 28px;
+                    -webkit-transition: color 0.3s ease;
+                    -moz-transition: color 0.3s ease;
+                    -ms-transition: color 0.3s ease;
+                    -o-transition: color 0.3s ease;
+                    transition: color 0.3s ease;
+
+                    &:hover, &:focus {
+                        background: none;
+                        color: $red-logo;
+                        outline: none;
+                        text-decoration: none;
+                    }
+                    
+                }
+
+                }
+
+                &.active {
+
+                    > a {
+                        background: none;
+                        color: $red-logo;
+                    }
+
+                }
+            
+        }
+            
+        }
     
 }
