@@ -105,10 +105,10 @@ html[xmlns] .slides {display: block;}
         text-align: center;
           
           @media (max-width: $screen-sm-max) and (orientation: portrait) {
-              top: 20%
+              top: 20%;
             }
           @media (max-width: $screen-sm-max) and (orientation: landscape) {
-              top: 35%
+              top: 35%;
             }
           
           .entry-meta {
