@@ -5,6 +5,7 @@ $brown-medium: #c7c6bf;
 $gray-cold: #98a5a8;
 $red-logo: #f5181e;
 $gray-nav: #555a52;
+$gray-titles: #3b3e38;
 
 
 
@@ -49,3 +50,14 @@ $gray-nav: #555a52;
 $font-DIN: 'DIN Condensed';
 $font-proxima-LT: 'Proxima Nova Lt';
 $font-proxima: 'Proxima Nova Rg';
+
+
+
+// Mixins
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
+}

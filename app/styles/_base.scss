@@ -369,3 +369,132 @@
         }
     
 }
+
+.contentPlace {
+    margin: 40px 0;
+
+    .latest-posts {
+
+        .section-header {
+            text-align: center;
+            position: relative;
+
+            &:after {
+                content: "";
+                border-bottom: 1px solid #cccccc;
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                bottom: 70%;
+                left: 0;
+                right: 0;
+            }
+
+            .title {
+                font-family: $font-DIN;
+                font-size: 48px;
+                color: $gray-titles;
+                font-weight: normal;
+                padding: 0 20px;
+                background: #FFF;
+                display: inline-block;
+                margin: 0 auto;
+
+                strong {
+                    font-size: 60px;
+                    font-weight: normal;
+                }
+
+            }
+
+            .sub-title {
+                color: $red-logo;
+                display: block;
+                font-family: $font-proxima-LT;
+                font-size: 24px;
+                margin: -15px 0 30px;
+            }
+
+        }
+
+        .entries {
+            
+            article {
+                min-height: 430px;
+
+                .entry-image {
+                    @include border-radius(2px);
+                    border: 1px solid #cfcfcf;
+
+                    > a {
+                        border: solid 5px #FFF;
+                        display: block;
+                    }
+
+                }
+
+                .entry-header {
+
+                    .entry-title {
+                        font-family: $font-DIN;
+                        font-size: 24px;
+                        line-height: 26px;
+                        font-weight: normal;
+                        margin-bottom: 0;
+
+                        > a {
+                            color: $red-logo;
+                        }
+                    }
+
+                }
+
+                .entry-meta {
+                    margin-bottom: 20px;
+
+                    .entry-category {
+                        
+                        > a {
+                            color: $gray-nav;
+                            font-style: italic;
+                            font-family: $font-proxima-LT;
+                            font-size: 16px;
+                        }
+
+                        &:after {
+                            content: "/";
+                            color: $gray-nav;
+                            font-style: italic;
+                            margin-left: 5px;
+                        }
+
+                    }
+
+                    .entry-date {
+                        color: $gray-nav;
+                        font-family: $font-proxima-LT;
+                        font-style: italic;
+                        margin-left: 5px;
+                        font-size: 16px;
+                    }
+
+                }
+
+                .entry-summary {
+
+                    p {
+                        color: $gray-nav;
+                        font-family: $font-proxima-LT;
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
